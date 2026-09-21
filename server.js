@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors()); // Lets the frontend (Live Server) talk to this API during development.
 app.use(express.json());
 // Serve the website files too, so beginners only need to start one server.
-app.use(express.static(path.join(__dirname, "../frontend")));
+app.use(express.static(path.join(__dirname, "frontend")));
 
 app.use("/api/products", productRoutes);
 app.use("/api/contact", contactRoutes);
